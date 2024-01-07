@@ -1,0 +1,19 @@
+{
+  "name": "lasierra/flux-kesearch-indexer",
+  "type": "typo3-cms-extension",
+  "description": "KeSearch Indexer for Flux Elements",
+  "autoload": {
+    "psr-4": {
+      "LaSierra\\FluxKesearchIndexer\\": "Classes"
+    }
+  },
+  "require": {
+    "typo3/cms-core": "^11.5",
+    "fluidtypo3/flux": "^9.1"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "flux_kesearch_indexer"
+    }
+  }
+}
