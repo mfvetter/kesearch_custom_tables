@@ -1,9 +1,10 @@
 # kesearch_custom_tables
-KeSearch Indexer for Custom Table Elements
+Make TYPO3 ke_search index custom tables of content elements, like Boostrap Package.
 
 This extension was based on the Flux Kesearch Indexer extension:
 
 https://extensions.typo3.org/extension/flux_kesearch_indexer
+
 https://github.com/MamounAlsmaiel/flux_kesearch_indexer
 
 This extension extends the standard ke_search content record indexers so that custom tables and fields can be indexed.
