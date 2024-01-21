@@ -1,23 +1,52 @@
-# flux_kesearch_indexer
-KeSearch Indexer for Flux Elements
+# kesearch_custom_tables
+KeSearch Indexer for Custom Table Elements
 
-This extension extends the two standard ke_search indexers (pages and content records) so that flux elements can be indexed.
-All you need to do is add the CType of your element (extensionname_templatename) to the "Content element types to be indexed" field in your Indexer Configuration.
+This extension was based on the Flux Kesearch Indexer extension:
+
+https://extensions.typo3.org/extension/flux_kesearch_indexer
+https://github.com/MamounAlsmaiel/flux_kesearch_indexer
+
+This extension extends the standard ke_search content record indexers so that custom tables and fields can be indexed.
+
+Currently only suports Typo3 11.5.
 
 ## Configuration
-If you want to index certain fields, you can add the following configuration to your typoscript.
-If you don't, the indexer indexes all fields (not recommended).
+Add the following configuration to your typoscript.
+
 ```
-plugin.tx_flux_kesearch_indexer{
-  config{
-    elements{
-      yourElement1{
-        fields = fieldName1,fieldName2,fieldName3,...
+plugin.tx_kesearch_custom_tables {
+  config {
+    elements {
+      accordion {
+        table = tx_bootstrappackage_accordion_item
+        fields = header,bodytext
       }
-      yourElement2{
-        fields = fieldName1,fieldName2,fieldName3,...
+      tab {
+        table = tx_bootstrappackage_accordion_item
+        fields = header,bodytext
+      }
+      carousel {
+        table = tx_bootstrappackage_carousel_item
+        fields = header,subheader,bodytext
+      }
+      icon_group {
+        table = tx_bootstrappackage_icon_group_item
+        fields = header,subheader
+      }
+      card_group {
+        table = tx_bootstrappackage_card_group_item
+        fields = header,bodytext
+      }
+      timeline {
+        table = tx_bootstrappackage_timeline_item
+        fields = header,bodytext
       }
     }
   }
 }
 ```
+
+## Limitations
+At this moment, this extension doesn't index linked files from the content of the custom tables.    
+
+It also doesn't work with the scheduler as the configuration is based on TypoScript only.

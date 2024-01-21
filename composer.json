@@ -1,10 +1,10 @@
 {
-  "name": "lasierra/flux-kesearch-indexer",
+  "name": "lasierra/kesearch-custom-tables",
   "type": "typo3-cms-extension",
-  "description": "KeSearch Indexer for Flux Elements",
+  "description": "KeSearch Indexer for Custom Tables",
   "autoload": {
     "psr-4": {
-      "LaSierra\\FluxKesearchIndexer\\": "Classes"
+      "LaSierra\\KeSearchCustomTables\\": "Classes"
     }
   },
   "require": {
@@ -13,7 +13,7 @@
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "flux_kesearch_indexer"
+      "extension-key": "kesearch_custom_tables"
     }
   }
 }
