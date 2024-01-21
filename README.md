@@ -13,6 +13,7 @@ Currently only suports Typo3 11.5.
 ## Configuration
 Add the following configuration to your typoscript.
 
+
 ```
 plugin.tx_kesearch_custom_tables {
   config {
